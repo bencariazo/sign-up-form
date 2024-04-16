@@ -135,3 +135,19 @@ table {
 	height: 100vh;
 }
 
+.left-side {
+	position: relative;
+}
+
+.transparent-bg {
+	position: absolute;
+	background: rgb(0, 0, 0, 0.5);
+	width: 100%;
+	padding: 1.3rem 0;
+	color: white;
+	font-size: 3rem;
+	top: 50%;
+	margin-top: -50%;
+	text-align: center;
+}
+
