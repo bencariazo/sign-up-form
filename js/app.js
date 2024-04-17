@@ -126,3 +126,15 @@ function validatePassword(){
     return true;
 }
 
+function validateConfirmPassword(){
+    const confirmPasswordError = document.querySelector('.div-confirm-password > .error')
+    if(confirmPassword.value.trim() === "") {
+        confirmPasswordError.textContent = "Confirm Password is required"
+    }
+    if(confirmPassword.value !== password.value){
+        confirmPasswordError.textContent = "It doesn't match with Password"
+        return false;
+    }
+    password.textContent = "";
+    return true;
+}
