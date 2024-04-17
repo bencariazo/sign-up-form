@@ -74,3 +74,20 @@ function validateEmail(){
     }
 }
 
+function validatePhone(){
+    // +123-456-789-1234 for reference
+    const phoneRegEx = /^\+[1-9]{1}[0-9]{0,2}-[2-9]{1}[0-9]{2}-[2-9]{1}[0-9]{2}-[0-9]{4}$/;
+    const phoneError = document.querySelector(".div-phone > .error");
+    if(phoneNumber.value.trim() === ""){
+        phoneError.textContent = "Phone is required";
+        return false;
+    } else if(!phoneRegEx.test(phoneNumber.value)) {
+        console.log(phoneNumber.value);
+        console.log(phoneRegEx.test(phoneNumber.value))
+        phoneError.textContent = "Not a valid phone number"
+    } else {
+        phoneError.textContent = "";
+        return true;
+    }
+}
+
