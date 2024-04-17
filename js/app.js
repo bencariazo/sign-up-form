@@ -17,3 +17,11 @@ form.noValidate = true;
 const addErrorMessage = document.createElement("div");
 addErrorMessage.classList.add("error")
 
+function addErrorDiv() {
+    divInput.forEach(el => {
+        el.appendChild(addErrorMessage.cloneNode(true))
+    });
+}
+
+addErrorDiv();
+
