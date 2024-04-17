@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup Page</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="flex-item left-side">
+				<img id="background-image" src="imgs/design-image.jpeg" alt="" />
+				<div class="transparent-bg">MARJ'S FAVORITE</div>
+			</div>
+			<div class="flex-item right-side">
+				<div class="header">
+					<p>
+						Your one stop shop for trendy, y2k, vintage, old school, etc. outfits!
+					</p>
+				</div>
+				<div class="form-container">
+					<div>
+						Required fields are followed by <span aria-label="required">*</span>
+					</div>
+					<form id="form">
+						<section class="form">
+							<div class="form-flex-child">
+								<div class="div-first-name">
+									<p>
+										<label for="first-name"
+											>FIRST NAME <span aria-label="required">*</span></label
+										>
+									</p>
+									<input type="text" id="first-name" name="first-name" />
+								</div>
+								<div class="div-last-name">
+									<p>
+										<label for="last-name"
+											>LAST NAME <span aria-label="required">*</span></label
+										>
+									</p>
+									<input type="text" id="last-name" name="last-name" />
+								</div>
+							</div>
+							<div class="form-flex-child">
+								<div class="div-email">
+									<p>
+										<label for="email"
+											>EMAIL ADDRESS <span aria-label="required">*</span></label
+										>
+									</p>
+									<input type="email" id="email" name="email" />
+								</div>
+								<div class="div-phone">
+									<p>
+										<label for="phone"
+											>PHONE NUMBER <span aria-label="required">*</span></label
+										>
+									</p>
+									<input type="tel" id="phone" name="phone" />
+								</div>
+							</div>
+							<div class="form-flex-child">
+								<div class="div-password">
+									<p>
+										<label for="password"
+											>PASSWORD <span aria-label="required">*</span></label
+										>
+									</p>
+									<input type="password" id="password" name="password" />
+								</div>
+								<div class="div-confirm-password">
+									<p>
+										<label for="confirm-password"
+											>CONFIRM PASSWORD <span aria-label="required">*</span></label
+										>
+									</p>
+									<input
+										type="password"
+										id="confirm-password"
+										name="confirm-password"
+									/>
+								</div>
+							</div>
+						</section>
+					</form>
+				</div>
+				<div class="btn-submit">
+					<button form="form" type="submit">CREATE ACCOUNT</button>
+					<p>Already have an account? <a href="#">Log in</a></p>
+				</div>
+			</div>
+		</div>
+		<script src="js/app.js" defer></script>
+	</body>
+</html>
