@@ -151,3 +151,8 @@ table {
 	text-align: center;
 }
 
+span[aria-label="required"] {
+	color: rgb(0, 0, 0, 0.3);
+	font-size: 0.8rem;
+}
+
