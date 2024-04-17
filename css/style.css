@@ -184,3 +184,17 @@ span[aria-label="required"] {
 	padding-left: 20px;
 }
 
+.header,
+.btn-submit {
+	background-color: #313638;
+	color: white;
+}
+.header {
+	flex-wrap: wrap;
+	height: 32%;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 2.5rem;
+	padding-bottom: 20px;
+}
+
