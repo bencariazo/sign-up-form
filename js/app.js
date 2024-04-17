@@ -138,3 +138,16 @@ function validateConfirmPassword(){
     password.textContent = "";
     return true;
 }
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const isValidFirstName = validateFirstName();
+    const isValidLastName = validateLastName();
+    const isValidEmail = validateEmail();
+    const isValidPhone = validatePhone();
+    const isValidPassword = validatePassword();
+    const isValidConfirmPassword = validateConfirmPassword();
+    if(isValidFirstName && isValidLastName && isValidEmail && isValidPhone && isValidPassword && isValidConfirmPassword){
+        alert("Registration Successful")
+        form.reset();
+    }
+})
