@@ -42,3 +42,20 @@ function validateFirstName() {
     }
 }
 
+function validateLastName(){
+    const lastNameError = document.querySelector(".div-last-name > .error");
+    if(lastName.value.trim() === "") {
+        lastNameError.textContent = "Last Name is required"
+        return false;
+    } else if (/[0-9]/.test(lastName.value)){
+        lastNameError.textContent = "Digits are not allowed"
+        return false;
+    } else if (/[a-z]/.test(lastName.value[0])){
+        lastNameError.textContent = "Capitalize first letter"
+        return false;
+    }else {
+        lastNameError.textContent = "";
+        return true
+    }
+}
+
