@@ -156,3 +156,31 @@ span[aria-label="required"] {
 	font-size: 0.8rem;
 }
 
+.right-side {
+	flex-basis: 100%;
+}
+
+.left-side {
+	width: 500px;
+	flex-shrink: 0;
+}
+
+.left-side > img {
+	width: 100%;
+}
+
+.flex-item {
+	display: flex;
+}
+
+.flex-item.right-side {
+	display: flex;
+	flex-direction: column;
+}
+
+.header,
+.form-container {
+	display: flex;
+	padding-left: 20px;
+}
+
