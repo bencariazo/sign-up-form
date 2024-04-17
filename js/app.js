@@ -59,3 +59,18 @@ function validateLastName(){
     }
 }
 
+function validateEmail(){
+    const emailError = document.querySelector(".div-email > .error");
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if(email.value.trim() === ""){
+        emailError.textContent = "Email is required";
+        return false;
+    } else if(!emailRegex.test(email.value)){
+        emailError.textContent = "It is not a valid email";
+        return false;
+    } else {
+        emailError.textContent = "";
+        return true;
+    }
+}
+
