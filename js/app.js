@@ -91,3 +91,38 @@ function validatePhone(){
     }
 }
 
+function validatePassword(){
+    const passwordError = document.querySelector(".div-password > .error");
+    if(password.value.trim() === ""){
+        passwordError.textContent = "Password is required";
+        return false;
+    } 
+    if (!/(?=.*[0-9])/.test(password.value)) {
+        passwordError.textContent = "Password must contain at least one digit (0-9)";
+        return false;
+    }
+    if (!/(?=.*[a-z])/.test(password.value)) {
+        passwordError.textContent = "Password must contain at least one lowercase letter (a-z)";
+        return false;
+    }
+    if (!/(?=.*[A-Z])/.test(password.value)) {
+        passwordError.textContent = "Password must contain at least one uppercase letter (A-Z)";
+        return false;
+    }
+    if (!/(?=.*\W)/.test(password.value)) {
+        passwordError.textContent = "Password must contain at least one special character";
+        return false;
+    }
+    if (/.*\s/.test(password.value)) {
+        passwordError.textContent = "Password cannot contain whitespace";
+        return false;
+    }
+    if (password.value.length < 8 || password.value.length > 16) {
+        passwordError.textContent = "Password length must be between 8 and 16 characters";
+        return false;
+    }
+
+    passwordError.textContent = "";
+    return true;
+}
+
