@@ -25,3 +25,20 @@ function addErrorDiv() {
 
 addErrorDiv();
 
+function validateFirstName() {
+    const firstNameError = document.querySelector(".div-first-name > .error");
+    if(firstName.value.trim() === "") {
+        firstNameError.textContent = "First Name is required"
+        return false;
+    } else if (/[0-9]/.test(firstName.value)){
+        firstNameError.textContent = "Digits are not allowed"
+        return false;
+    } else if (/[a-z]/.test(firstName.value[0])){
+        firstNameError.textContent = "Capitalize first letter"
+        return false;
+    }else {
+        firstNameError.textContent = "";
+        return true
+    }
+}
+
